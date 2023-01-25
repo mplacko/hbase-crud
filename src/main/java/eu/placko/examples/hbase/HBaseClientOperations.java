@@ -10,11 +10,11 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
 public class HBaseClientOperations {
-	//		   cf:cq1	   cf:cq2		  cf:cq3   cf:cq4	   cf:cq5  cf:cq6
-	//row_key  category    product		  size_eu  color	   sex	   price_eur
-	//1		   cell:shoes  cell:productA  cell:42  cell:black  cell:m  cell:44.50
-	//2		   cell:shoes  cell:productA  cell:42  cell:white  cell:m  cell:40.50
-	//1		   cell:shoes  cell:productA  cell:42  cell:black  cell:m  cell:42.50
+	//         cf:cq1      cf:cq2         cf:cq3   cf:cq4      cf:cq5  cf:cq6
+	//row_key  category    product        size_eu  color       sex     price_eur
+	//1        cell:shoes  cell:productA  cell:42  cell:black  cell:m  cell:44.50
+	//2        cell:shoes  cell:productA  cell:42  cell:white  cell:m  cell:40.50
+	//1        cell:shoes  cell:productA  cell:42  cell:black  cell:m  cell:42.50
 	
 	private static final TableName tb = TableName.valueOf("shop");
     private static final byte[] cf = Bytes.toBytes("shop");
