@@ -2,11 +2,9 @@
 An example for explaining how to work with HBase Java API – CRUD.
 
 ### HOW TO CONFIGURE THE PROJECT
-```sh
 path: /hbase-crud/src/main/resources/
 - `add core-site.xml from /etc/hbase/conf.cloudera.hbase/`
 - `add hbase-site.xml from /etc/hbase/conf.cloudera.hbase/`
-```
 
 ## Building and Running
 
