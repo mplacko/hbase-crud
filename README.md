@@ -12,6 +12,7 @@ path: /hbase-crud/src/main/resources/
 To build the application it is required to have this installed:
 - `Java 9`
 - `Maven 3.x`
+
 Then just run this:
 ```sh
 mvn clean install assembly:single
