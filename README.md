@@ -4,8 +4,8 @@ An example for explaining how to work with HBase Java API – CRUD.
 ### HOW TO CONFIGURE THE PROJECT
 ```sh
 path: /hbase-crud/src/main/resources/
-add core-site.xml from /etc/hbase/conf.cloudera.hbase/
-add hbase-site.xml from /etc/hbase/conf.cloudera.hbase/
+- `add core-site.xml from /etc/hbase/conf.cloudera.hbase/`
+- `add hbase-site.xml from /etc/hbase/conf.cloudera.hbase/`
 ```
 
 ## Building and Running
@@ -14,7 +14,7 @@ add hbase-site.xml from /etc/hbase/conf.cloudera.hbase/
 To build the application it is required to have this installed:
 - `Java 9`
 - `Maven 3.x`
-- `Then just run this:`
+Then just run this:
 ```sh
 mvn clean install assembly:single
 ```
