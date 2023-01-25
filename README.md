@@ -1,27 +1,33 @@
-HOW TO CONFIGURE THE PROJECT
- 
+# hbase-crud
+An example for explaining how to work with HBase Java API – CRUD.
+
+### HOW TO CONFIGURE THE PROJECT
+```sh
 path: /hbase-crud/src/main/resources/
 add core-site.xml from /etc/hbase/conf.cloudera.hbase/
 add hbase-site.xml from /etc/hbase/conf.cloudera.hbase/
- 
-Building and Running
-  
-Build
+```
+
+## Building and Running
+
+### Build
 To build the application it is required to have this installed:
-Java 9
-Maven 3.x
-Then just run this:
+- `Java 9`
+- `Maven 3.x`
+- `Then just run this:`
+```sh
 mvn clean install assembly:single
-  
-Run
-$ su <user>
-$ cd /home/<user>
-$ chmod 770 ./hbase/hbase-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar
-$ chown <user>:<user> ./hbase/hbase-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar
-$ kinit -kt /etc/security/keytabs/<user>.keytab <user>
-$ java -jar ./hbase-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+```
 
+### Run
+- `$ su <user>`
+- `$ cd /home/<user>`
+- `$ chmod 770 ./hbase/hbase-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar`
+- `$ chown <user>:<user> ./hbase/hbase-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar`
+- `$ kinit -kt /etc/security/keytabs/<user>.keytab <user>`
+- `$ java -jar ./hbase-crud-0.0.1-SNAPSHOT-jar-with-dependencies.jar`
 
+```sh
 Result
 *** HBase is running. ***
 
@@ -98,27 +104,30 @@ OK
 *** Delete - BEGIN ***
 OK
 *** Delete - End ***
+```
 
+```sh
 1st step: Create/Insert
  ________________________________
-/		        /t1 (version 1)	/
+/               /t1 (version 1) /
 |_______________|_______________|
-|row_key	    |cf:cq6		    |
+|row_key        |cf:cq6         |
 |_______________|_______________|
-|1		        |44.50          |
+|1              |44.50          |
 |_______________|_______________|
-|2		        |40.50          |
+|2              |40.50          |
 |_______________|_______________|
 
 2nd step: Update
    ________________________________
-  /		          /t1 (version 1) /
+  /               /t1 (version 1) /
  /_______________/_______________/
-/		        /t2 (version 2)	/
+/               /t2 (version 2) /
 |_______________|_______________|
-|row_key	    |cf:cq6		    |
+|row_key        |cf:cq6         |
 |_______________|_______________|
-|1		        |42.50          |
+|1              |42.50          |
 |_______________|_______________|
-|2		        |40.50          |
+|2              |40.50          |
 |_______________|_______________|
+```
